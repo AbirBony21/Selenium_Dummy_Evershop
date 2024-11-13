@@ -1,6 +1,6 @@
 const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
-const productName = "Nike react phantom run flyknit 2";
+const productName = "Nike react phantom";
 async function testRun() {
     let driver  = await new Builder().forBrowser("chrome").build();
     await driver.manage().window().maximize();
