@@ -15,7 +15,8 @@ async function testRun() {
     await driver.sleep(2000);
     await driver.findElement(By.xpath("//a[@href='#' and contains(text(),'Black')]")).click();
     await driver.sleep(2000);
-    await driver.findElement(By.xpath("//input[@name='qty']")).clear();
+    //await driver.findElement(By.xpath("//input[@name='qty']")).clear();
+    await driver.findElement(By.css("input[name='qty']")).clear();
     await driver.sleep(2000);
     await driver.findElement(By.xpath("//input[@name='qty']")).sendKeys(2);
     await driver.sleep(2000);
