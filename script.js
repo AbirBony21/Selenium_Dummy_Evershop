@@ -6,7 +6,8 @@ async function testRun() {
     await driver.manage().window().maximize();
     await driver.get("https://demo.evershop.io/");
     //await driver.findElement(By.className("search-icon")).click();
-    await driver.findElement(By.xpath("//a[@class='search-icon']")).click();
+    await driver.findElement(By.css(".search-icon")).click();
+    //await driver.findElement(By.xpath("//a[@class='search-icon']")).click();
     await driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Nike", Key.ENTER);
     await driver.findElement(By.xpath(`//a[contains(@href,'182')]/span[contains(text(),'${productName}')]`)).click();
     await driver.sleep(3000);
